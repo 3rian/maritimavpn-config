@@ -1,0 +1,19 @@
+adiciona config.json
+{
+  "configs": [
+    {
+      "nome": "Servidor Claro BR",
+      "payload": "GET / HTTP/1.1\\r\\nHost: m.claro.com.br\\r\\n\\r\\n",
+      "sni": "m.claro.com.br",
+      "proxy_host": "proxy.claro.com.br",
+      "proxy_port": 80
+    },
+    {
+      "nome": "Servidor TIM BR",
+      "payload": "CONNECT example.com:443 HTTP/1.1\\r\\nHost: example.com\\r\\n\\r\\n",
+      "sni": "example.com",
+      "proxy_host": "proxy.tim.com.br",
+      "proxy_port": 8080
+    }
+  ]
+}
