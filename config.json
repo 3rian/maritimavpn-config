@@ -1,5 +1,22 @@
 adiciona config.json
 {
+  "method": "CONNECT",
+  "host_port": "[host_port]",
+  "http_version": "HTTP/1.1",
+  "headers": {
+    "Host": "web.vivo.com.br",
+    "Upgrade": "websocket",
+    "User-Agent": "@MarítimaVPN"
+  },
+  "request": {
+    "method": "OPTIONS",
+    "url": "http://app.vivo.com.br/",
+    "protocol": "[protocol]"
+  }
+}
+
+
+{
   "configs": [
     {
       "nome": "Servidor Claro BR",
