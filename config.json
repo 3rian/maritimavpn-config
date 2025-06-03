@@ -18,10 +18,20 @@
       "Porta": "7700"
     }
   ],
-  "Servers": [
-
-  ],
+  "Servers": [],
   "Networks": [
+    {
+      "payloads": [
+        {
+          "name": "websocket_upgrade",
+          "payload": "GET / HTTP/1.1\nHost: maritimavpn.shop\nConnection: Upgrade\nUpgrade: Websocket\n@MaritimaVPN\n\n"
+        },
+        {
+          "name": "websocket_connect",
+          "payload": "CONNECT [host_port] HTTP/1.1\n\nOPTIONS http://web.vivo.com.br/ [protocol]\nHost: web.vivo.com.br\nUpgrade: websocket\n@MarítimaVPN\n"
+        }
+      ]
+    },
     {
       "Name": "VIVO PROXY 01",
       "FLAG": "vivo",
