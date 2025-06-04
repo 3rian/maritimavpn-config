@@ -13,8 +13,8 @@
       "name": "Servidor MarítimaVPN",
       "host": "192.99.110.188",
       "port": 22,
-      "username": "seu_usuario_ssh",
-      "password": "sua_senha_ssh",
+      "username": "meu",
+      "password": "minha",
       "type": "ssh",
       "sni": "maritimavpn.shop"
     }
