@@ -1,6 +1,6 @@
 {
   "Version": "1.0.1",
-  "ReleaseNotes": "",
+  "ReleaseNotes": "Adicionado servidor VPS",
   "Udp": [
     {"Porta": "7300"},
     {"Porta": "7400"},
@@ -8,7 +8,17 @@
     {"Porta": "7600"},
     {"Porta": "7700"}
   ],
-  "Servers": [],
+  "Servers": [
+    {
+      "name": "Servidor MarítimaVPN",
+      "host": "192.99.110.188",
+      "port": 22,
+      "username": "seu_usuario_ssh",
+      "password": "sua_senha_ssh",
+      "type": "ssh",
+      "sni": "maritimavpn.shop"
+    }
+  ],
   "Networks": [
     {
       "payloads": [
