@@ -1,12 +1,6 @@
 {
   "Version": "1.0.2",
-  "ReleaseNotes": "",
-  "UrlUpdate": "https://raw.githubusercontent.com/3rian/maritimavpn-config/refs/heads/main/config.json",
-  "Sms": "https://kiritosshxd.github.io/Conecta4g_site/UrlSms",
-  "EmailFeedback": "kiritosshxd5733@gmail.com",
-  "UrlContato": "https://t.me/kiritosshxd",
-  "UrlTermos": "https://kiritosshxd.github.io/Conecta4g_site/termos.html",
-  "CheckUser": "true",
+  "ReleaseNotes": "VIVO",
   "Udp": [
     {
       "Porta": "7300"
@@ -30,7 +24,6 @@
       "TYPE": "premium",
       "FLAG": "br.png",
       "ServerIP": "maritimavpn.shop",
-      "CheckUser": "http://192.99.110.188:5454/checkUser",
       "ServerPort": "22",
       "SSLPort": "443",
       "USER": "",
