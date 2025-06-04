@@ -1,34 +1,47 @@
 {
-  "Version": "1.0.1",
-  "ReleaseNotes": "Adicionado servidor VPS",
+  "Version": "1.0.2",
+  "ReleaseNotes": "Adicionados múltiplos servidores, suporte a UDP, payloads WebSocket otimizados.",
   "Udp": [
-    {"Porta": "7300"},
-    {"Porta": "7400"},
-    {"Porta": "7500"},
-    {"Porta": "7600"},
-    {"Porta": "7700"}
+    { "Porta": "7300" },
+    { "Porta": "7400" },
+    { "Porta": "7500" },
+    { "Porta": "7600" },
+    { "Porta": "7700" }
   ],
   "Servers": [
     {
-      "name": "Servidor MarítimaVPN",
+      "name": "Servidor Marítima - Canadá",
       "host": "192.99.110.188",
       "port": 22,
-      "username": "meu",
-      "password": "minha",
+      "username": "root",
+      "password": "sua_senha_aqui",
       "type": "ssh",
       "sni": "maritimavpn.shop"
+    },
+    {
+      "name": "Servidor Marítima - Alternativo",
+      "host": "vps2.exemplo.com",
+      "port": 22,
+      "username": "uservpn",
+      "password": "senha123",
+      "type": "ssh",
+      "sni": "outrosite.com"
     }
   ],
   "Networks": [
     {
       "payloads": [
         {
-          "name": "websocket_upgrade",
-          "payload": "GET / HTTP/1.1\r\nHost: maritimavpn.shop\r\nConnection: Upgrade\r\nUpgrade: WebSocket\r\nSec-WebSocket-Version: 13\r\nSec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==\r\n@MaritimaVPN\r\n\r\n"
+          "name": "WebSocket Upgrade (default)",
+          "payload": "GET / HTTP/1.1\r\nHost: maritimavpn.shop\r\nConnection: Upgrade\r\nUpgrade: websocket\r\nUser-Agent: MaritimaVPN\r\n\r\n"
         },
         {
-          "name": "websocket_connect",
-          "payload": "CONNECT %s HTTP/1.1\r\nHost: %s\r\nConnection: Upgrade\r\nUpgrade: WebSocket\r\nSec-WebSocket-Version: 13\r\nSec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==\r\n@MarítimaVPN\r\n\r\n"
+          "name": "WebSocket CONNECT",
+          "payload": "CONNECT %s HTTP/1.1\r\nHost: %s\r\nConnection: Upgrade\r\nUpgrade: websocket\r\nUser-Agent: MaritimaVPN\r\n\r\n"
+        },
+        {
+          "name": "WebSocket com SNI",
+          "payload": "GET wss://maritimavpn.shop/ HTTP/1.1\r\nHost: maritimavpn.shop\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nUser-Agent: MaritimaVPN\r\n\r\n"
         }
       ]
     }
