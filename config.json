@@ -26,36 +26,26 @@
   ],
   "Servers": [
     {
-      "Name": "INFINITY NET|PLUS1",
+      "Name": "Marítima BR1",
       "TYPE": "premium",
       "FLAG": "br.png",
-      "ServerIP": "kingofnet.xyz",
-      "CheckUser": "http://144.22.130.40:5454/checkUser",
+      "ServerIP": "maritimavpn.shop",
+      "CheckUser": "http://192.99.110.188:5454/checkUser",
       "ServerPort": "22",
       "SSLPort": "443",
       "USER": "",
       "PASS": ""
     },
-    {
-      "Name": "PREMIUM 02 | PLUS",
-      "TYPE": "free",
-      "FLAG": "br.png",
-      "ServerIP": "kingofnet.xyz",
-      "CheckUser": "http://144.22.130.40:5454/checkUser",
-      "ServerPort": "22",
-      "SSLPort": "443",
-      "USER": "teste",
-      "PASS": "1234"
-    }
+
   ],
   "Networks": [
     {
       "Name": "VIVO PROXY 01",
       "FLAG": "vivo",
-      "Payload": "GET / HTTP/1.1[crlf]Host: [app_host][crlf]Upgrade: websocket[crlf][crlf]",
-      "SNI": "",
+      "Payload": "CONNECT / HTTP/1.1[crlf] [crlf]OPTIONSHost:http://app.vivo.com.br/ [protocol][crlf]Host:web.vivo.com.br[crlf]Upgrade [app_host][crlf]Upgrade: websocket[crlf][crlf]",
+      "SNI": "app.vivo.com.br",
       "TlsIP": "",
-      "ProxyIP": "104.18.7.80",
+      "ProxyIP": "192.99.110.188:443",
       "ProxyPort": "80",
       "Info": "Proxy"
     },
